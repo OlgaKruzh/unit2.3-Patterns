@@ -27,7 +27,7 @@ import static com.codeborne.selenide.Condition.*;
             $("[name = 'name']").setValue("Герман Греф");
             $("[name = 'phone']").setValue("+12345678911");
             $("[class='checkbox__box']").click();
-            $$("button").find(exactText("Забронировать")).click();
+            $$("button").find(exactText("Запланировать")).click();
             $(withText("Встреча")).waitUntil(visible, 15000);
         }
     }
