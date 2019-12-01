@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+}
+group 'ru.netology'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.6.0-M1'
+
+    // https://mvnrepository.com/artifact/org.jacoco/org.jacoco.agent
+    testImplementation group: 'org.jacoco', name: 'org.jacoco.agent', version: '0.8.5'
+    testImplementation 'com.codeborne:selenide:5.5.0'
+
+
+}
+test {
+    useJUnitPlatform()
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+}
