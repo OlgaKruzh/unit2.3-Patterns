@@ -28,6 +28,6 @@ import static com.codeborne.selenide.Condition.*;
             $("[name = 'phone']").setValue("+12345678911");
             $("[class='checkbox__box']").click();
             $$("[class=\"button__text\"]").find(exactText("Запланировать")).click();
-            $(withText("Необходимо подтверждение")).waitUntil(visible, 15000);
+          //  $(withText("Необходимо подтверждение")).waitUntil(visible, 15000);
         }
     }
