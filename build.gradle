@@ -18,6 +18,8 @@ dependencies {
     // https://mvnrepository.com/artifact/org.jacoco/org.jacoco.agent
     testImplementation group: 'org.jacoco', name: 'org.jacoco.agent', version: '0.8.5'
     testImplementation 'com.codeborne:selenide:5.5.0'
+    // https://mvnrepository.com/artifact/com.github.javafaker/javafaker
+    testImplementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.1'
 
 
 }
