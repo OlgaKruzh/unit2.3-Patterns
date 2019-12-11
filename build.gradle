@@ -22,10 +22,6 @@ dependencies {
     // https://mvnrepository.com/artifact/com.github.javafaker/javafaker
     testImplementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.1'
 
-
-
-
-
 }
 test {
     useJUnitPlatform()

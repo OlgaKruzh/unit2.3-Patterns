@@ -22,13 +22,13 @@ class DeliveryDateChangingTest extends User{
         LocalDate dateLast = dateFirst.plusDays(7);
         String dateLastInput = dateLast.format(formatter);
 
-        $("[placeholder='Город']").setValue(city);
+        $("[placeholder='Город']").setValue(getCity());
         $("[placeholder = 'Дата встречи']").sendKeys(Keys.chord(Keys.CONTROL, "a"));
         $("[placeholder = 'Дата встречи']").sendKeys(Keys.chord(Keys.DELETE));
         $("[placeholder = 'Дата встречи']").setValue(dateFirstInput);
         $("button").submit();
-        $("[name = 'name']").setValue(name);
-        $("[name = 'phone']").setValue(phone);
+        $("[name = 'name']").setValue(getName());
+        $("[name = 'phone']").setValue(getPhone());
         $("[class='checkbox__box']").click();
         $$("[class='button__text']").find(exactText("Запланировать")).click();
         $(withText("Успешно")).waitUntil(visible, 15000);
@@ -39,9 +39,9 @@ class DeliveryDateChangingTest extends User{
         $("[name = 'name']").sendKeys(Keys.chord(Keys.DELETE));
         $("[name = 'phone']").sendKeys(Keys.chord(Keys.CONTROL, "a"));
         $("[name = 'phone']").sendKeys(Keys.chord(Keys.DELETE));
-        $("[placeholder='Город']").setValue(city);
-        $("[name = 'name']").setValue(name);
-        $("[name = 'phone']").setValue(phone);
+        $("[placeholder='Город']").setValue(getCity());
+        $("[name = 'name']").setValue(getName());
+        $("[name = 'phone']").setValue(getPhone());
         $("[placeholder = 'Дата встречи']").sendKeys(Keys.chord(Keys.CONTROL, "a"));
         $("[placeholder = 'Дата встречи']").sendKeys(Keys.chord(Keys.DELETE));
         $("[placeholder = 'Дата встречи']").setValue(dateLastInput);

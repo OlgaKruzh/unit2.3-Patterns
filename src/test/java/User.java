@@ -9,9 +9,9 @@ import org.junit.jupiter.api.BeforeEach;
 @Data
 @AllArgsConstructor
 public class User {
-     String city = "";
-     String name = "";
-     String phone = "";
+     private String city = "";
+     private String name = "";
+     private String phone = "";
 
     public User() { }
 
